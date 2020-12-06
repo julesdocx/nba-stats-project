@@ -1,0 +1,131 @@
+body{
+    /* background: rgb(200,200,200); */
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(150,150,150,1) 100%);
+}
+.container {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 11% 11% 11% 11% 11% 11% 11% 11% 11%;
+    grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11% 11% ;
+}
+label{
+    padding: 10px 0px 10px 0px;
+}
+a{
+    text-decoration: none;
+}
+
+a:link,a:visited,a:active {
+    color:black;
+}
+.subject{
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+#chartContainer{
+    grid-row-start: 3;
+    grid-row-end: end;
+    display: flex;
+    flex-direction: column;
+}
+#addData{
+    display:flex;
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-row-end: end;
+}
+.content{
+    border-top:0px solid rgb(50,50,50);
+    transition: ease-in 0.3s;
+}
+.content:hover{
+    border-top:5px solid rgb(50,50,50,0.2);
+}
+#saveCharts{
+    display:flex;
+    flex-direction: column;
+    grid-column-start: 8;
+    grid-row-start: 3;
+    grid-row-end: end;
+}
+.searchdiv{
+    margin:5px 10px 10px 10px;
+}
+h2{
+    margin:20px 10px 20px 10px ;
+}
+h1{
+    margin: 20 11 11 11;
+	position: relative;
+	overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    grid-row-start: 1;
+    grid-column-start: 5;
+    grid-row-end: 2;
+}
+
+h1:before {
+	content: '';
+	position: absolute;
+	left: -300px;
+	top: -200px;
+    background-color: none;
+    border: 30px solid black;
+    height: 000%;
+	width: 1000%;
+    z-index: -1;
+    transform: rotate(45deg);
+	transition: ease-in 0.5s;
+}
+h1:hover:before {
+    left: -1800px;
+    transform: rotate(45deg);
+}
+#saveChartsList {
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#aboutDiv{
+    margin: 36px 20px 20px 20px;
+    display: flex;
+    font-size: 1.3em;
+    grid-row-start: 1;
+    grid-column-start: 6;
+    color: black;
+}
+#about{
+    border-top: 5px solid black;
+    transition: ease-in 0.3s;
+}
+#about:hover{
+    border-top: 1px solid black;
+}
+.deleteChart{
+    margin: 0px 10px 0px 0px;
+}
+.savedChartL{
+    list-style: none;
+}
+input {
+    width:100%;
+}
+#submitChart{
+    border-top: 5px solid  rgb(50,50,50,0.2);
+    transition: ease-in 0.3s;
+    margin: 30px 0px 0px 0px
+}
+#submitChart:hover{
+    border-top: 1px solid  rgb(50,50,50,0.5);
+}

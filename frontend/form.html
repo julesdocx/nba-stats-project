@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chart form</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleSheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="form.js" type="module"></script>
+</head>
+<body>
+    <div id="" class="container">
+        <form action="/postData" id="chartContainer" class="subject content">
+        <label for="chartName">Chartname:</label>
+        <input type="text" name="chartName" id="chartName">
+
+        <label for="yourName">Your name:</label>
+        <input type="text" name="name" id="yourName">
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+
+        <input type="hidden" name="data" id="chartData" value="">
+        <a href="index.html" id="submitChart">Save Chart</a>
+    </form>
+    </div>
+    
+</body>
+</html>

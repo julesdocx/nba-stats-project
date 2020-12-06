@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styleSheets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js" type="module"></script>
+  <script >
+    window.onload=function() {
+      localStorage.removeItem('dataLists');
+    }
+    </script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="aboutDiv"><a id="about" href="about.html">About</a></div>
+    <header class="">
+      <nav>
+        <h1 id="title"  value="none" class="navbar-brand" href="/index.html">DOCX STATS</h1>
+      </nav>
+    </header>
+    <br>
+
+    <div id="chartContainer" class="subject content">
+      <canvas id="chart"></canvas>
+    </div>
+    <div id="addData" class="content">
+      <h2>Edit Chart</h2>
+      <button id="clear" class="searchdiv">Reset Chart</button>
+      <div id="playerSelectionContainer" class="searchdiv">
+        <div class="">
+          <label for="playerSearch">Choose your players:</label>
+          <select id='playerSearch'>
+            <option value="James Harden">James Harden</option>
+            <option value="LeBron James">LeBron James</option>
+            <option value="Anthony Davis">Anthony Davis</option>
+            <option value="Luka Doncic">Luka Doncic</option>
+            <option value="Damian Lillard">Damian Lillard</option>
+            <option value="Russell Westbrook">Russell Westbrook</option>
+            <option value="Joel Embiid">Joel Embiid</option>
+            <option value="Kemba Walker">Kemba Walker</option>
+            <option value="Kyrie Irving">Kyrie Irving</option>
+            <option value="Daniel Theis">Daniel Theis</option>
+          </select>
+          <button id="playerSelectionCall">Add Player</button>
+        </div>
+        <div class="" id="yourPlayerList">
+        </div>
+      </div>
+
+      <div id="statisticsSelectionContainer" class="searchdiv">
+        <div class="">
+          <label for="">Choose your statistic:</label>
+          <select id='statSelect'>
+            <option value="Minutes">Minutes</option>
+            <option value="FieldGoalsMade">FieldGoalsMade</option>
+            <option value="FieldGoalsAttempted">FieldGoalsAttempted</option>
+            <option value="FieldGoalsPercentage">FieldGoalsPercentage</option>
+            <option value="EffectiveFieldGoalsPercentage">EffectiveFieldGoalsPercentage</option>
+            <option value="TwoPointersMade">TwoPointersMade</option>
+            <option value="TwoPointersAttempted">TwoPointersAttempted</option>
+            <option value="TwoPointersPercentage">TwoPointersPercentage</option>
+            <option value="ThreePointersMade">ThreePointersMade</option>
+            <option value="ThreePointersAttempted">ThreePointersAttempted</option>
+            <option value="ThreePointersPercentage">ThreePointersPercentage</option>
+            <option value="ThreePointersMade">ThreePointersMade</option>
+            <option value="FreeThrowsMade">FreeThrowsMade</option>
+            <option value="FreeThrowsAttempted">FreeThrowsAttempted</option>
+            <option value="FreeThrowsPercentage">FreeThrowsPercentage</option>
+            <option value="OffensiveRebounds">OffensiveRebounds</option>
+            <option value="DefensiveRebounds">DefensiveRebounds</option>
+            <option value="Rebounds">Rebounds</option>
+            <option value="OffensiveReboundsPercentage">OffensiveReboundsPercentage</option>
+            <option value="DefensiveReboundsPercentage">DefensiveReboundsPercentage</option>
+            <option value="TotalReboundsPercentage">TotalReboundsPercentage</option>
+            <option value="Assists">Assists</option>
+            <option value="Steals">Steals</option>
+            <option value="TrueShootingAttempts">TrueShootingAttempts</option>
+            <option value="TrueShootingPercentage">TrueShootingPercentage</option>
+            <option value="BlockedShots">BlockedShots</option>
+            <option value="Turnovers">Turnovers</option>
+            <option value="PersonalFouls">PersonalFouls</option>
+            <option value="Points">Points</option>
+            <option value="PlayerEfficiencyRating">PlayerEfficiencyRating</option>
+            <option value="AssistsPercentage">AssistsPercentage</option>
+            <option value="StealsPercentage">StealsPercentage</option>
+            <option value="BlocksPercentage">BlocksPercentage</option>
+            <option value="UsageRatePercentage">UsageRatePercentage</option>
+            <option value="PlusMinus">PlusMinus</option>
+            <option value="DoubleDoubles">DoubleDoubles</option>
+            <option value="TripleDoubles">TripleDoubles</option>
+          </select>
+          <button id="addStat">Add Statistic</button>
+        </div>
+        <div class="" id="yourStatList">
+        </div>
+
+      </div>
+      <a href="form.html" class="searchdiv" id="saveChart">Save Chart</a>
+    </div>
+
+    <div id="saveCharts" class="content">
+        <h2>My charts</h2>
+      <div class="searchdiv">
+      <p>Load charts here:</p>
+      <div id="saveChartsList" class="searchdiv">
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
